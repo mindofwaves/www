@@ -20,7 +20,7 @@ export default function RootLayout({ children }: Props) {
       suppressHydrationWarning
       className={`${GeistSans.variable} ${GeistMono.variable}`}
     >
-      <body className=" antialiased">
+      <body className="antialiased">
         <main className="w-screen h-screen">{children}</main>
       </body>
     </html>
