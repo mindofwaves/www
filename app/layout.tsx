@@ -13,6 +13,27 @@ type Props = {
   children: React.ReactNode;
 };
 
+import { MorphingText } from "@/components/player/morphing.text";
+
+const texts = [
+  "Hello",
+  "Morphing",
+  "Text",
+  "Animation",
+  "React",
+  "Component",
+  "Smooth",
+  "Transition",
+  "Engaging",
+];
+
+function MorphingTextDemo() {
+  return <MorphingText texts={texts} />;
+}
+export { MorphingTextDemo };
+
+
+
 export default function RootLayout({ children }: Props) {
   return (
     <html
