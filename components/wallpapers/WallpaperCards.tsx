@@ -38,18 +38,18 @@ const WallpaperCards = ({ onClose }: WallpaperCardsProps) => {
   };
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-4">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
+    <div className="w-full h-[calc(100vh-6rem)] max-w-7xl mx-auto px-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 h-full">
         {wallpapers.map((wallpaper, index) => (
           <motion.div
             key={wallpaper.id}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
-            className="group"
+            className="group h-full"
           >
-            <div className="bg-white/10 backdrop-blur-md rounded-3xl overflow-hidden border border-white/10 hover:border-white/20 transition-colors">
-              <div className="w-full aspect-[9/16] relative">
+            <div className="bg-white/10 backdrop-blur-md rounded-3xl overflow-hidden border border-white/10 hover:border-white/20 transition-colors h-full flex flex-col">
+              <div className="relative flex-1">
                 <img 
                   src={wallpaper.previewUrl} 
                   alt={wallpaper.title}
